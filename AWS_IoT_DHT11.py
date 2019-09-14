@@ -7,6 +7,8 @@ import Adafruit_DHT #Import DHT Library for sensor
 myMQTTClient = AWSIoTMQTTClient("new_Client")
 
 myMQTTClient.configureEndpoint("a11y5asn11fe7b-ats.iot.ap-south-1.amazonaws.com", 8883)
+
+#download Root CA1 certificate
 myMQTTClient.configureCredentials("/home/pi/Desktop/IoT/AWS-Certificates/AmazonRootCA1.pem", "/home/pi/Desktop/IoT/AWS-Certificates/private.pem.key", "/home/pi/Desktop/IoT/AWS-Certificates/SSLCertificate.pem.crt")
 myMQTTClient.configureOfflinePublishQueueing(-1)  # Infinite offline Publish queueing
 myMQTTClient.configureDrainingFrequency(2)  # Draining: 2 Hz
