@@ -4,9 +4,9 @@ from datetime import date, datetime #To get date and time
 #import Adafruit_CharLCD as LCD #Import LCD library 
 import Adafruit_DHT #Import DHT Library for sensor
 
-myMQTTClient = AWSIoTMQTTClient("new_Client")
+myMQTTClient = AWSIoTMQTTClient("new_Client") #add your cliend id from Test menu
 
-myMQTTClient.configureEndpoint("a11y5asn11fe7b-ats.iot.ap-south-1.amazonaws.com", 8883)
+myMQTTClient.configureEndpoint("a11y5asn11fe7b-ats.iot.ap-south-1.amazonaws.com", 8883) #add your endpoint from act menu
 
 #download Root CA1 certificate
 myMQTTClient.configureCredentials("/home/pi/Desktop/IoT/AWS-Certificates/AmazonRootCA1.pem", "/home/pi/Desktop/IoT/AWS-Certificates/private.pem.key", "/home/pi/Desktop/IoT/AWS-Certificates/SSLCertificate.pem.crt")
