@@ -17,24 +17,7 @@ myMQTTClient.configureMQTTOperationTimeout(5)  # 5 sec
 
 sensor_name = Adafruit_DHT.DHT11 #we are using the DHT11 sensor
 sensor_pin = 4 #The sensor is connected to GPIO17 on Pi
-
-lcd_rs        = 7  #RS of LCD is connected to GPIO 7 on PI
-lcd_en        = 8  #EN of LCD is connected to GPIO 8 on PI 
-lcd_d4        = 25 #D4 of LCD is connected to GPIO 25 on PI
-lcd_d5        = 24 #D5 of LCD is connected to GPIO 24 on PI
-lcd_d6        = 23 #D6 of LCD is connected to GPIO 23 on PI
-lcd_d7        = 18 #D7 of LCD is connected to GPIO 18 on PI
-lcd_backlight =  0  #LED is not connected so we assign to 0
-
-lcd_columns = 16 #for 16*2 LCD
-lcd_rows    = 2 #for 16*2 LCD
-
-#lcd = LCD.Adafruit_CharLCD(lcd_rs, lcd_en, lcd_d4, lcd_d5, lcd_d6, lcd_d7, 
-                           #lcd_columns, lcd_rows, lcd_backlight)   #Send all the pin details to library 
-
-#lcd.message('AWS-IoT with Pi \n -CircuitDigest') #Give a intro message
 time.sleep(2) #wait for 2 secs
-#lcd.clear() #clear the LCD
 
 connecting_time = time.time() + 10
 
